@@ -1,0 +1,101 @@
+body {
+  background-color: #b1e3fa;
+}
+
+h1 {
+  color: #6F518F;
+  font-family: modak;
+  font-size: 128px;
+  -webkit-text-stroke: black 0.1px;
+  position: absolute;
+  top: 160px;
+    left: 300px;
+}
+
+h2 {
+  color: #ff95a9;
+  font-family: chicle;
+  font-size: 64px;
+  -webkit-text-stroke:black 0.1px;
+  position: absolute;
+  top: 560px;
+left: 300px;
+
+}
+
+.cloud-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "l l . . . m m . t t t . "
+    ". . . . . . . . . . r r "
+    ". . . . . . b b b . . . ";
+}
+
+.leftCloud {
+  /* position: absolute;
+  top: 0px;
+ left: 0px; */
+  grid-area: l;
+}
+
+.bottomCloud {
+  /*position: absolute;
+  right: 300px;
+  bottom: 0px;*/
+
+  grid-area: b;
+}
+
+.rightCloud {
+  /* position: absolute;
+  top: 350px;
+  right: 0px; */
+  grid-area: r;
+}
+
+.topCloud {
+  /* position: absolute;
+  top: 0px;
+  right: 100px; */
+
+  grid-area: t;
+}
+
+.monogram-container {
+  /* position: absolute;
+  top: 0px;
+  padding-right: 100px; */
+  grid-area: m;
+}
+
+.rainbow {
+  position: absolute;
+  right: 0px;
+  top: 2px;
+}
+
+
+
+.icon-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      ". . . . . . . . . i . . "
+      ". . . . . . . . . . n . "
+      ". . . . . . . e . . . . ";
+
+      .instagramLogo{
+        grid-area: i;
+      }
+
+      .linkedinLogo{
+        grid-area: n;
+      }
+
+      .emailLogo{
+        grid-area: e;
+      }
+    }
