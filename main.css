@@ -1,15 +1,20 @@
 body {
   background-color: #b1e3fa;
+  background-image: url("images/RainbowStripe.png");
+  background-size: cover;
+  
 }
 
-h1 {
+
+
+ h1 {
   color: #6F518F;
   font-family: modak;
   font-size: 128px;
   -webkit-text-stroke: black 0.1px;
-  position: absolute;
+  /*position: absolute;
   top: 160px;
-    left: 300px;
+    left: 300px;*/
 }
 
 h2 {
@@ -17,41 +22,20 @@ h2 {
   font-family: chicle;
   font-size: 64px;
   -webkit-text-stroke:black 0.1px;
-  position: absolute;
+ /* position: absolute;
   top: 560px;
-left: 300px;
+left: 300px; */
 
-}
+} 
 
-.icon-container {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas:
-      ". . . . . . . . . i . . "
-      ". . . . . . . . . . n . "
-      ". . . . . . . e . . . . ";
 
-      .instagramLogo{
-        grid-area: i;
-      }
-
-      .linkedinLogo{
-        grid-area: n;
-      }
-
-      .emailLogo{
-        grid-area: e;
-      }
-    }
-
-.cloud-container {
+.page-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: auto;
   grid-template-areas:
     "l l . . . m m . t t t . "
-    ". . . . . . . . . . r r "
+    ". . n n n n . . . . r r "
     ". . . . . . b b b . . . ";
 }
 
@@ -92,11 +76,36 @@ left: 300px;
   grid-area: m;
 }
 
-.rainbow {
-  position: absolute;
-  right: 0px;
-  top: 2px;
+.nametext-container{
+  grid-area: n;
 }
 
+.st0{
 
-
+                    .emailLogo {
+                      fill: #a3d17b;
+                    }
+              
+                    .cls-2, .cls-3 {
+                      fill: none;
+                    }
+              
+                    .cls-4 {
+                      fill: #fffffa;
+                      stroke: #231f20;
+                    }
+              
+                    .cls-4, .cls-3 {
+                      stroke-miterlimit: 10;
+                      stroke-width: 3px;
+                    }
+              
+                    .cls-3 {
+                      stroke: #010101;
+                    }
+              
+                    .cls-5 {
+                      clip-path: url(#clippath);
+                    }
+                
+              }
