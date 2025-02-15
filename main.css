@@ -2,6 +2,7 @@ body {
   background-color: #b1e3fa;
   background-image: url("images/RainbowStripe.png");
   background-size: cover;
+  cursor: url('images/beeCursor.png'), auto;
   
 }
 
@@ -53,13 +54,66 @@ left: 300px; */
   bottom: 0px;*/
 
   grid-area: b;
+
+  .cls-1 {
+    fill: #a3d17b;
+  }
+
+  .cls-2, .cls-3 {
+    fill: none;
+  }
+
+  .cls-4 {
+    fill: #fffffa;
+    stroke: #231f20;
+  }
+
+  .cls-4, .cls-3 {
+    stroke-miterlimit: 10;
+    stroke-width: 3px;
+  }
+
+  .cls-3 {
+    stroke: #010101;
+  }
+
+  .cls-5 {
+    clip-path: url(#clippath);
+  }
 }
+
 
 .rightCloud {
   /* position: absolute;
   top: 350px;
   right: 0px; */
   grid-area: r;
+
+  .cls-1, .cls-2 {
+    fill: none;
+  }
+
+  .cls-3 {
+    fill: #44c4da;
+    stroke-linejoin: round;
+  }
+
+  .cls-3, .cls-2 {
+    stroke: #231f20;
+    stroke-width: 3px;
+  }
+
+  .cls-2 {
+    stroke-miterlimit: 10;
+  }
+
+  .cls-4 {
+    fill: #fffef9;
+  }
+
+  .cls-5 {
+    clip-path: url(#clippath);
+  }
 }
 
 .topCloud {
