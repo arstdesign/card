@@ -33,9 +33,10 @@ left: 300px; */
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
+  height: 100vh;
   grid-template-areas:
     "l l . . . m m . t t t . "
-    ". . n n n n . . . . r r "
+    ". . n n n n n n . . r r "
     ". . . . . . b b b . . . ";
 }
 
@@ -80,32 +81,55 @@ left: 300px; */
   grid-area: n;
 }
 
-.st0{
+/* Instagram SVG styles /
+#instagram .st2 {
+    fill: #FFFEF9;
+    stroke: #231F20;
+    stroke-width: 3;
+    stroke-miterlimit: 10;
+}
 
-                    .emailLogo {
-                      fill: #a3d17b;
-                    }
-              
-                    .cls-2, .cls-3 {
-                      fill: none;
-                    }
-              
-                    .cls-4 {
-                      fill: #fffffa;
-                      stroke: #231f20;
-                    }
-              
-                    .cls-4, .cls-3 {
-                      stroke-miterlimit: 10;
-                      stroke-width: 3px;
-                    }
-              
-                    .cls-3 {
-                      stroke: #010101;
-                    }
-              
-                    .cls-5 {
-                      clip-path: url(#clippath);
-                    }
-                
-              }
+#instagram .st3 {
+    fill: none;
+    stroke: #231F20;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/ Top Cloud SVG styles /
+#top-cloud .st1 {
+    fill: #FFFFFA;
+    stroke: #231F20;
+    stroke-width: 3;
+    stroke-miterlimit: 10;
+}
+
+/ Left Cloud SVG styles /
+#left-cloud {
+    fill: #FFFEF9;
+    stroke: #231F20;
+    stroke-width: 3;
+    stroke-miterlimit: 10;
+}
+
+/ Monogram SVG styles */
+.monogram-container path {
+  fill: #FED769;
+  stroke: #231F20;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* .monogram-container .blue-fill {
+  fill: #44C4DA;
+}
+
+.monogram-container .pink-fill {
+  fill: #F594A9;
+}
+
+.monogram-container .green-fill {
+  fill: #A3D17B;
+} */
