@@ -3,46 +3,51 @@ body {
   background-image: url("images/RainbowStripe.png");
   background-size: cover;
   cursor: url('svg/beeCursor.svg'), auto;
-height: 924 px;
-width: 1899 px;
-  
+margin: 0%;
+
 }
+
+a{
+  cursor: url("svg/beeStingCursor.svg"), auto;
+    }
+
+
 
 
 
  h1 {
   color: #6F518F;
   font-family: modak;
-  font-size: 80px;
+  font-size: 70px;
   -webkit-text-stroke: black 0.1px;
 
-  /*position: absolute;
+  position: absolute;
   top: 300px;
-   left: 300px;*/
+   left: 300px;
 }
 
 h2 {
   color: #ff95a9;
   font-family: chicle;
-  font-size: 25px;
+  font-size: 35px;
   -webkit-text-stroke:black 0.1px;
-  
- /* position: absolute;*
-   top: 560px;
-left: 300px; */
+ position: absolute;
+   top: 540px;
+left: 300px; 
 
 } 
 
 
 .page-container {
+  
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto;
-  height: 100vh;
+  grid-template-rows:auto;
+  height: 50vh;
   grid-template-areas:
-    "l l . . . m m t t t t . "
-    ". n n n n n . . . r r r "
-    ". . . . . . b b b b . . ";
+    "l . . . m m . t t t t t "
+    ". . . . . . . . . r r r "
+    ". . . b b b b b b . . . ";
 }
 
 .leftCloud {
@@ -116,7 +121,7 @@ left: 300px; */
   }
 
  .cls-5 {
-    clip-path: url(#clippath);
+    clip-path: url(#clippath); 
   }
 }
 
@@ -128,16 +133,10 @@ left: 300px; */
   grid-area: t;
 }
 
-.monogram-container {
-  /* position: absolute;
-  top: 0px;
-  padding-right: 100px; */
-  grid-area: m;
-}
 
-.nametext-container{
+/*.nametext-container{
   grid-area: n;
-}
+}*/
 
 /* Instagram SVG styles /
 #instagram .st2 {
@@ -204,14 +203,3 @@ grid-area: m;
   
 }
 
-/* .monogram-container .blue-fill {
-  fill: #44C4DA;
-}
-
-.monogram-container .pink-fill {
-  fill: #F594A9;
-}
-
-.monogram-container .green-fill {
-  fill: #A3D17B;
-} */
