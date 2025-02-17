@@ -2,8 +2,8 @@ body {
   background-color: #b1e3fa;
   background-image: url("images/RainbowStripe.png");
   background-size: cover;
-  cursor: url('svg/beeCursor.svg'), auto;
-margin: 0%;
+  cursor: url("svg/beeCursor.svg"), auto;
+  margin: 0%;
 
 }
 
@@ -37,6 +37,173 @@ left: 300px;
 
 } 
 
+/*@keyframes wobble {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  15% {
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+
+  30% {
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+
+  45% {
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+
+  60% {
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+
+  75% {
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.wobble {
+  animation-name: wobble;
+}
+
+
+/*
+@keyframes backInRight {
+  0% {
+    transform: translateX(2000px) scale(0.7);
+    opacity: 0.7;
+  }
+
+  80% {
+    transform: translateX(0px) scale(0.7);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.backInRight {
+  animation-name: backInRight;
+}
+
+@keyframes backInUp {
+  0% {
+    transform: translateY(1200px) scale(0.7);
+    opacity: 0.7;
+  }
+
+  80% {
+    transform: translateY(0px) scale(0.7);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.backInUp {
+  animation-name: backInUp;
+}
+
+
+@keyframes backInLeft {
+  0% {
+    transform: translateX(-2000px) scale(0.7);
+    opacity: 0.7;
+  }
+
+  80% {
+    transform: translateX(0px) scale(0.7);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.backInLeft {
+  animation-name: backInLeft;
+}
+
+*/
+@keyframes shakeX {
+  from,
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate3d(10px, 0, 0);
+  }
+}
+.shakeX {
+  animation-name: shakeX;
+}
+
+@keyframes shakeY {
+  from,
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate3d(0, -10px, 0);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate3d(0, 10px, 0);
+  }
+}
+.shakeY {
+  animation-name: shakeY;
+}
+
+
+
+
+.topCloud:hover {
+  animation: shakeX 2s;
+  animation-iteration-count: infinite;
+}
+
+.rightCloud:hover {
+  animation: shakeY 2s;
+  animation-iteration-count: infinite;
+}
+
+.bottomCloud:hover {
+  animation: shakeX 2s;
+  animation-iteration-count: infinite;
+}
+
+
 
 .page-container {
   
@@ -55,6 +222,8 @@ left: 300px;
   top: 0px;
  left: 0px; */
   grid-area: l;
+  animation: backInLeft 2s ease-in-out;
+  
 }
 
 .bottomCloud {
@@ -63,7 +232,7 @@ left: 300px;
   bottom: 0px;*/
 
   grid-area: b;
-
+animation: backInUp 2s ;
   .cls-1 {
     fill: #a3d17b;
   }
@@ -98,6 +267,8 @@ left: 300px;
   right: 0px; */
   grid-area: r;
 
+  animation: backInRight 2s ease-in-out;
+
   .cls-1, .cls-2 {
     fill: none;
   }
@@ -131,8 +302,42 @@ left: 300px;
   right: 100px; */
 
   grid-area: t;
+
+  animation: backInRight 2s ease-in-out;
+
 }
 
+.monogram-container{
+grid-area: m;
+
+  .cls-1 {
+    fill: #fed769;
+  }
+
+  .cls-2 {
+    fill: none;
+  }
+
+  .cls-2, .cls-3, .cls-4, .cls-5 {
+    stroke: #231f20;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3px;
+  }
+
+  .cls-3 {
+    fill: #a3d17b;
+  }
+
+  .cls-4 {
+    fill: #f594a9;
+  }
+
+  .cls-5 {
+    fill: #44c4da;
+  }
+  
+}
 
 /*.nametext-container{
   grid-area: n;
@@ -171,35 +376,4 @@ left: 300px;
 }
 
 / Monogram SVG styles */
-.monogram-container{
-grid-area: m;
-
-  .cls-1 {
-    fill: #fed769;
-  }
-
-  .cls-2 {
-    fill: none;
-  }
-
-  .cls-2, .cls-3, .cls-4, .cls-5 {
-    stroke: #231f20;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-width: 3px;
-  }
-
-  .cls-3 {
-    fill: #a3d17b;
-  }
-
-  .cls-4 {
-    fill: #f594a9;
-  }
-
-  .cls-5 {
-    fill: #44c4da;
-  }
-  
-}
 
