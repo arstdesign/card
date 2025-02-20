@@ -2,8 +2,11 @@ body {
   background-color: #b1e3fa;
   background-image: url("images/RainbowStripe.png");
   background-size: cover;
-  cursor: url("svg/beeCursor.svg"), auto;
-  margin: 0%;
+  cursor: url('svg/beeCursor.svg'), auto;
+  margin: 0; /* Remove default margin */
+  height: 100vh;
+  width: 100vw;
+  overflow-y: hidden;
 
 }
 
@@ -20,8 +23,7 @@ a{
   font-family: modak;
   font-size: 70px;
   -webkit-text-stroke: black 0.1px;
-
-  position: absolute;
+ position: absolute;
   top: 300px;
    left: 300px;
 }
@@ -29,7 +31,7 @@ a{
 h2 {
   color: #ff95a9;
   font-family: chicle;
-  font-size: 35px;
+  font-size: 25px;
   -webkit-text-stroke:black 0.1px;
  position: absolute;
    top: 540px;
@@ -37,202 +39,46 @@ left: 300px;
 
 } 
 
-/*@keyframes wobble {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-
-  15% {
-    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
-  }
-
-  30% {
-    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
-  }
-
-  45% {
-    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
-  }
-
-  60% {
-    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
-  }
-
-  75% {
-    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-  }
-}
-.wobble {
-  animation-name: wobble;
-}
 
 
-/*
-@keyframes backInRight {
+
+@keyframes moveClouds {
   0% {
-    transform: translateX(2000px) scale(0.7);
-    opacity: 0.7;
+    transform: translateX(0);
   }
-
-  80% {
-    transform: translateX(0px) scale(0.7);
-    opacity: 0.7;
-  }
-
   100% {
-    transform: scale(1);
-    opacity: 1;
+    transform: translateX(100px);
   }
 }
-.backInRight {
-  animation-name: backInRight;
-}
-
-@keyframes backInUp {
-  0% {
-    transform: translateY(1200px) scale(0.7);
-    opacity: 0.7;
-  }
-
-  80% {
-    transform: translateY(0px) scale(0.7);
-    opacity: 0.7;
-  }
-
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-.backInUp {
-  animation-name: backInUp;
-}
-
-
-@keyframes backInLeft {
-  0% {
-    transform: translateX(-2000px) scale(0.7);
-    opacity: 0.7;
-  }
-
-  80% {
-    transform: translateX(0px) scale(0.7);
-    opacity: 0.7;
-  }
-
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-.backInLeft {
-  animation-name: backInLeft;
-}
-
-*/
-@keyframes shakeX {
-  from,
-  to {
-    transform: translate3d(0, 0, 0);
-  }
-
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    transform: translate3d(-10px, 0, 0);
-  }
-
-  20%,
-  40%,
-  60%,
-  80% {
-    transform: translate3d(10px, 0, 0);
-  }
-}
-.shakeX {
-  animation-name: shakeX;
-}
-
-@keyframes shakeY {
-  from,
-  to {
-    transform: translate3d(0, 0, 0);
-  }
-
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    transform: translate3d(0, -10px, 0);
-  }
-
-  20%,
-  40%,
-  60%,
-  80% {
-    transform: translate3d(0, 10px, 0);
-  }
-}
-.shakeY {
-  animation-name: shakeY;
-}
-
-
-
-
-.topCloud:hover {
-  animation: shakeX 2s;
-  animation-iteration-count: infinite;
-}
-
-.rightCloud:hover {
-  animation: shakeY 2s;
-  animation-iteration-count: infinite;
-}
-
-.bottomCloud:hover {
-  animation: shakeX 2s;
-  animation-iteration-count: infinite;
-}
-
-
 
 .page-container {
   
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows:auto;
-  height: 50vh;
+ 
   grid-template-areas:
     "l . . . m m . t t t t t "
     ". . . . . . . . . r r r "
     ". . . b b b b b b . . . ";
+  
 }
 
 .leftCloud {
-  /* position: absolute;
-  top: 0px;
- left: 0px; */
+  
   grid-area: l;
-  animation: backInLeft 2s ease-in-out;
+  
   
 }
 
 .bottomCloud {
-  /*position: absolute;
-  right: 300px;
-  bottom: 0px;*/
+ 
 
   grid-area: b;
-animation: backInUp 2s ;
+  
+  
+
+animation: moveClouds 6s ease-in-out infinite alternate;
   .cls-1 {
     fill: #a3d17b;
   }
@@ -262,12 +108,11 @@ animation: backInUp 2s ;
 
 
 .rightCloud {
-  /* position: absolute;
-  top: 350px;
-  right: 0px; */
-  grid-area: r;
-
-  animation: backInRight 2s ease-in-out;
+  
+ grid-area: r;
+ 
+ 
+  animation: moveClouds 8s ease-in-out infinite alternate;
 
   .cls-1, .cls-2 {
     fill: none;
@@ -297,18 +142,21 @@ animation: backInUp 2s ;
 }
 
 .topCloud {
-  /* position: absolute;
-  top: 0px;
-  right: 100px; */
+  
 
   grid-area: t;
+  
 
-  animation: backInRight 2s ease-in-out;
+  animation: moveClouds 10s ease-in-out infinite alternate;
+  
 
 }
 
 .monogram-container{
 grid-area: m;
+
+
+
 
   .cls-1 {
     fill: #fed769;
