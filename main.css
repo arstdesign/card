@@ -54,6 +54,10 @@ left: 300px;
   }
 }
 
+
+
+
+
 .page-container {
   
   display: grid;
@@ -61,9 +65,9 @@ left: 300px;
   grid-template-rows:auto;
  
   grid-template-areas:
-    "l . . . m m . t t t t t "
-    ". . . . . . . . . r r r "
-    ". . . b b b b b b . . . ";
+    "l c c . m m . t t t t t "
+    ". . . . . v v . . r r r "
+    "g g . b b b b b b . . . ";
   
 }
 
@@ -81,7 +85,7 @@ left: 300px;
   
   
 
-animation: moveClouds 6s ease-in-out infinite alternate;
+/*animation: moveClouds 6s ease-in-out infinite alternate;*/
   .cls-1 {
     fill: #a3d17b;
   }
@@ -115,7 +119,7 @@ animation: moveClouds 6s ease-in-out infinite alternate;
  grid-area: r;
  
  
-  animation: moveClouds 8s ease-in-out infinite alternate;
+  /*animation: moveClouds 8s ease-in-out infinite alternate;*/
 
   .cls-1, .cls-2 {
     fill: none;
@@ -150,7 +154,7 @@ animation: moveClouds 6s ease-in-out infinite alternate;
   grid-area: t;
   
 
-  animation: moveClouds 10s ease-in-out infinite alternate;
+  /*animation: moveClouds 10s ease-in-out infinite alternate;*/
   
 
 }
@@ -189,6 +193,39 @@ grid-area: m;
   }
   
 }
+
+.littleTopCloud{
+  animation: moveClouds 3s ease-in-out infinite alternate;
+grid-area: c;
+  .cls-1 {
+    fill: #fffffa;
+    stroke: #231f20;
+    stroke-miterlimit: 10;
+  }
+}
+
+.littleMiddleCloud{
+  animation: moveClouds 5s ease-in-out infinite alternate;
+grid-area: v;
+  .cls-1 {
+    fill: #fffffa;
+    stroke: #231f20;
+    stroke-miterlimit: 10;
+  }
+}
+
+.littleLeftCloud{
+  animation: moveClouds 6s ease-in-out infinite alternate;
+grid-area: g;
+  .cls-1 {
+    fill: #fffffa;
+    stroke: #231f20;
+    stroke-miterlimit: 10;
+  }
+}
+
+
+
 
 
 @media (max-width: 768px) { 
