@@ -240,11 +240,11 @@ grid-area: g;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(5, 1fr) ;
       grid-template-areas:
-          "l . m t"
+          "l c m t"
           ". . . ."
-          ". . . r"
+          ". . v r"
           ". . . ."
-          ". . . b";
+          "g . . b";
 
 
     }
